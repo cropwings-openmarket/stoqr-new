@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
-  basePath: '/stoqr',
+  // basePath removed - app.getstoqr.com and getstoqr.com serve at root
   typescript: {
     ignoreBuildErrors: true,
   },
