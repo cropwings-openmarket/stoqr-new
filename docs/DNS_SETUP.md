@@ -4,6 +4,9 @@
 
 Configure DNS for Stoqr to use the `getstoqr.com` domain.
 
+> **Note:** IP `74.225.184.252` is the shared **Intellibyld AKS Cluster** Application Gateway.
+> This IP hosts multiple projects: Intellibyld, Stoqr, and GoFytt.
+
 ### Current State
 ```
 http://74.225.184.252/stoqr → Stoqr Frontend (path-based)
@@ -12,7 +15,8 @@ http://74.225.184.252/stoqr → Stoqr Frontend (path-based)
 ### Target State
 ```
 https://getstoqr.com     → Stoqr Frontend
-https://www.getstoqr.com → Stoqr Frontend (redirect)
+https://www.getstoqr.com → Stoqr Frontend
+https://app.getstoqr.com → Stoqr Frontend (primary)
 ```
 
 ---
@@ -24,7 +28,7 @@ https://www.getstoqr.com → Stoqr Frontend (redirect)
 | AKS Cluster | `intellibyld-dev-aks` |
 | Resource Group | `intellibyld-dev-rg` |
 | Namespace | `logpilot` |
-| Load Balancer IP | `74.225.184.252` |
+| Application Gateway IP | `74.225.184.252` (shared) |
 | Container Registry | `intellibylddevacr.azurecr.io` |
 
 ---
