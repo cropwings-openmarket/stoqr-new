@@ -21,7 +21,7 @@ export async function submitContactForm(data: ContactFormData) {
         email: data.email,
         company: data.company || "Not provided",
         message: data.message,
-        subject: "New Contact Form Submission from Intellibyld",
+        subject: "New Contact Form Submission from Stoqr",
       }),
     })
 
